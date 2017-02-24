@@ -21777,11 +21777,6 @@ var App = function (_Component) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(
-          'p',
-          null,
-          'Hello, World!'
-        ),
         _react2.default.createElement(_EventsList2.default, null)
       );
     }
@@ -28625,9 +28620,11 @@ var _react = __webpack_require__(80);
 
 var _react2 = _interopRequireDefault(_react);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _dateformat = __webpack_require__(332);
 
-// import * as actions from '../actions/actions';
+var _dateformat2 = _interopRequireDefault(_dateformat);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Event = function (_Component) {
   (0, _inherits3.default)(Event, _Component);
@@ -28655,7 +28652,7 @@ var Event = function (_Component) {
               _react2.default.createElement(
                 'figure',
                 { className: 'image is-64x64' },
-                _react2.default.createElement('img', { src: this.props.url, alt: 'Image' })
+                _react2.default.createElement('img', { src: this.props.image, alt: 'Image' })
               )
             ),
             _react2.default.createElement(
@@ -28672,6 +28669,12 @@ var Event = function (_Component) {
                     null,
                     this.props.name
                   ),
+                  _react2.default.createElement('br', null),
+                  _react2.default.createElement(
+                    'strong',
+                    null,
+                    (0, _dateformat2.default)(this.props.startdate).toString().slice(0, 24)
+                  ),
                   _react2.default.createElement('br', null)
                 )
               )
@@ -28683,6 +28686,7 @@ var Event = function (_Component) {
   }]);
   return Event;
 }(_react.Component);
+// import * as actions from '../actions/actions';
 
 exports.default = Event;
 
@@ -28762,7 +28766,7 @@ var EventsList = function (_Component) {
           'div',
           null,
           this.props.events.events.map(function (event, i) {
-            return _react2.default.createElement(_Event2.default, { name: event.name.text, key: i });
+            return _react2.default.createElement(_Event2.default, { name: event.name.text, startdate: event.start.local, image: event.logo.original.url, key: i });
           })
         );
       }
@@ -28786,6 +28790,22 @@ function mapDispatchToProps(dispatch, props) {
 }
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(EventsList);
+
+/***/ },
+/* 332 */
+/***/ function(module, exports) {
+
+"use strict";
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = date;
+function date(formatdate) {
+  var date = new Date(formatdate);
+  return date;
+}
 
 /***/ }
 /******/ ]);

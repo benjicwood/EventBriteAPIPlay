@@ -17,7 +17,7 @@ class EventsList extends Component {
       return (
         <div>
           {this.props.events.events.map(function (event, i) {
-            return <Event name={event.name.text} key={i} />;
+            return <Event name={event.name.text} startdate={event.start.local} image={event.logo.original.url} key={i} />;
           })}
         </div>
       );
