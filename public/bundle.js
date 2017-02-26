@@ -28659,24 +28659,19 @@ var Event = function (_Component) {
               'div',
               { className: 'media-content' },
               _react2.default.createElement(
-                'div',
-                { className: 'content' },
-                _react2.default.createElement(
-                  'p',
-                  null,
-                  _react2.default.createElement(
-                    'strong',
-                    null,
-                    this.props.name
-                  ),
-                  _react2.default.createElement('br', null),
-                  _react2.default.createElement(
-                    'strong',
-                    null,
-                    (0, _dateformat2.default)(this.props.startdate).toString().slice(0, 24)
-                  ),
-                  _react2.default.createElement('br', null)
-                )
+                'strong',
+                null,
+                this.props.name
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                (0, _dateformat2.default)(this.props.startdate).toString().slice(0, 24)
+              ),
+              _react2.default.createElement(
+                'a',
+                { className: 'button is-hovered', href: this.props.url },
+                'GO TO EVENT'
               )
             )
           )
@@ -28766,7 +28761,7 @@ var EventsList = function (_Component) {
           'div',
           null,
           this.props.events.events.map(function (event, i) {
-            return _react2.default.createElement(_Event2.default, { name: event.name.text, startdate: event.start.local, image: event.logo.original.url, key: i });
+            return _react2.default.createElement(_Event2.default, { name: event.name.text, startdate: event.start.local, image: event.logo.original.url, html: event.description.html, url: event.url, key: i });
           })
         );
       }

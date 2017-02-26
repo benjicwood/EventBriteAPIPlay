@@ -15,14 +15,9 @@ export default class Event extends Component {
               </figure>
             </div>
             <div className='media-content'>
-              <div className='content'>
-                <p>
-                  <strong>{this.props.name}</strong>
-                  <br />
-                  <strong>{date(this.props.startdate).toString().slice(0, 24)}</strong>
-                  <br />
-                </p>
-              </div>
+              <strong>{this.props.name}</strong>
+              <p>{date(this.props.startdate).toString().slice(0, 24)}</p>
+              <a className='button is-hovered' href={this.props.url}>GO TO EVENT</a>
             </div>
           </article>
         </div>
