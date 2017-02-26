@@ -28671,7 +28671,7 @@ var Event = function (_Component) {
               _react2.default.createElement(
                 'a',
                 { className: 'button is-hovered', href: this.props.url },
-                'GO TO EVENT'
+                'Go To Event'
               )
             )
           )
