@@ -40,7 +40,7 @@ export default class Mo extends Component {
   render () {
     return (
       <div>
-        <button onClick={this.openModal}>Open Modal</button>
+        <a className='button is-hovered' onClick={this.openModal} href={this.props.url}>Detail View</a>
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
