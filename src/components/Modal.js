@@ -49,7 +49,7 @@ export default class Mo extends Component {
           contentLabel='Example Modal'
         >
           <button onClick={this.closeModal}>close</button>
-          <h2 ref='subtitle'>Hello</h2>
+          <h2 ref='subtitle'>{this.props.html}</h2>
         </Modal>
       </div>
     );

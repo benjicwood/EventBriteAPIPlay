@@ -28677,7 +28677,7 @@ var Event = function (_Component) {
               _react2.default.createElement(
                 'dl',
                 null,
-                _react2.default.createElement(_Modal2.default, null),
+                _react2.default.createElement(_Modal2.default, { html: this.props.html }),
                 _react2.default.createElement(
                   'a',
                   { className: 'button is-hovered', href: this.props.url },
@@ -28739,6 +28739,10 @@ var actions = _interopRequireWildcard(_actions);
 var _Event = __webpack_require__(330);
 
 var _Event2 = _interopRequireDefault(_Event);
+
+var _Modal = __webpack_require__(333);
+
+var _Modal2 = _interopRequireDefault(_Modal);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -28925,7 +28929,7 @@ var Mo = function (_Component) {
           _react2.default.createElement(
             'h2',
             { ref: 'subtitle' },
-            'Hello'
+            this.props.html
           )
         )
       );
