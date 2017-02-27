@@ -28648,36 +28648,35 @@ var Event = function (_Component) {
         null,
         _react2.default.createElement(
           'div',
-          { className: 'box' },
+          { className: 'card' },
           _react2.default.createElement(
-            'article',
-            { className: 'media' },
+            'div',
+            { className: 'card-content' },
             _react2.default.createElement(
               'div',
-              { className: 'media-left' },
+              { className: 'media' },
               _react2.default.createElement(
-                'figure',
-                { className: 'image is-64x64' },
-                _react2.default.createElement('img', { src: this.props.image, alt: 'Image' })
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content' },
-              _react2.default.createElement(
-                'strong',
-                null,
-                this.props.name
+                'div',
+                { className: 'media-left' },
+                _react2.default.createElement(
+                  'figure',
+                  { className: 'image is-128x128' },
+                  _react2.default.createElement('img', { src: this.props.image, alt: 'Image' })
+                )
               ),
               _react2.default.createElement(
-                'p',
-                null,
-                (0, _dateformat2.default)(this.props.startdate).toString().slice(0, 24)
-              ),
-              console.log(this.props.html),
-              _react2.default.createElement(
-                'dl',
-                null,
+                'div',
+                { className: 'media-content' },
+                _react2.default.createElement(
+                  'p',
+                  { className: 'title is-4' },
+                  this.props.name
+                ),
+                _react2.default.createElement(
+                  'p',
+                  { className: 'subtitle is-6' },
+                  (0, _dateformat2.default)(this.props.startdate).toString().slice(0, 24)
+                ),
                 _react2.default.createElement(_Modal2.default, { html: this.props.html }),
                 _react2.default.createElement(
                   'a',
@@ -28907,7 +28906,7 @@ var Mo = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'is-pulled-left' },
         _react2.default.createElement(
           'a',
           { className: 'button is-hovered', onClick: this.openModal, href: this.props.url },
@@ -28919,12 +28918,12 @@ var Mo = function (_Component) {
             isOpen: this.state.modalIsOpen,
             onAfterOpen: this.afterOpenModal,
             onRequestClose: this.closeModal,
-            style: customStyles,
+            className: 'modal-content',
             contentLabel: 'Example Modal'
           },
           _react2.default.createElement(
             'button',
-            { onClick: this.closeModal },
+            { onClick: this.closeModal, className: 'button' },
             'close'
           ),
           _react2.default.createElement(

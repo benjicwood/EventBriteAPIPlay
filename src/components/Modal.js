@@ -39,16 +39,16 @@ export default class Mo extends Component {
 
   render () {
     return (
-      <div>
+      <div className='is-pulled-left'>
         <a className='button is-hovered' onClick={this.openModal} href={this.props.url}>Detail View</a>
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
-          style={customStyles}
+          className='modal-content'
           contentLabel='Example Modal'
         >
-          <button onClick={this.closeModal}>close</button>
+          <button onClick={this.closeModal} className='button'>close</button>
           <h2 ref='subtitle'><div dangerouslySetInnerHTML={{__html: this.props.html}} /></h2>
         </Modal>
       </div>
