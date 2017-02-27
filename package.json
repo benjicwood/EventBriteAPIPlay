@@ -33,6 +33,7 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-modal": "^1.6.5",
+    "react-native-sortable-listview": "^0.1.1",
     "react-redux": "^5.0.2",
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.0",
@@ -42,6 +43,7 @@
     "webpack": "^2.2.1"
   },
   "devDependencies": {
+    "babel-jest": "^19.0.0",
     "concurrently": "^3.3.0",
     "webpack": "^2.1.0-beta.22"
   }

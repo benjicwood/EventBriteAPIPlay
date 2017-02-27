@@ -3,12 +3,8 @@ import Modal from 'react-modal';
 
 const customStyles = {
   content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)'
+    backgroundColor: '#fff'
+
   }
 };
 
@@ -47,8 +43,8 @@ export default class Mo extends Component {
           onRequestClose={this.closeModal}
           className='modal-content'
           contentLabel='Example Modal'
+          style={customStyles}
         >
-          <button onClick={this.closeModal} className='button'>close</button>
           <h2 ref='subtitle'><div dangerouslySetInnerHTML={{__html: this.props.html}} /></h2>
         </Modal>
       </div>

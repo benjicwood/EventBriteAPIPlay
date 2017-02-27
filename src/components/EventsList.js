@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
 
 import Event from './Event';
-import Modal from './Modal';
 
 class EventsList extends Component {
   componentWillMount () {
