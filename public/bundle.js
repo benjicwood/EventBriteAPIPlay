@@ -28674,6 +28674,7 @@ var Event = function (_Component) {
                 null,
                 (0, _dateformat2.default)(this.props.startdate).toString().slice(0, 24)
               ),
+              console.log(this.props.html),
               _react2.default.createElement(
                 'dl',
                 null,
@@ -28929,7 +28930,7 @@ var Mo = function (_Component) {
           _react2.default.createElement(
             'h2',
             { ref: 'subtitle' },
-            this.props.html
+            _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: this.props.html } })
           )
         )
       );

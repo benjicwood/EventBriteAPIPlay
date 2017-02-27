@@ -19,6 +19,7 @@ export default class Event extends Component {
             <div className='content'>
               <strong>{this.props.name}</strong>
               <p>{date(this.props.startdate).toString().slice(0, 24)}</p>
+              {console.log(this.props.html)}
               <dl><Modal html={this.props.html} /><a className='button is-hovered' href={this.props.url}>Go To Event</a></dl>
             </div>
           </article>
