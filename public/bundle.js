@@ -12419,7 +12419,7 @@ var Event = function (_Component) {
                 _react2.default.createElement(
                   'p',
                   { className: 'subtitle is-6' },
-                  (0, _dateformat2.default)(this.props.startdate).toString().slice(0, 24)
+                  (0, _dateformat2.default)(this.props.startdate)
                 ),
                 _react2.default.createElement(_Modal2.default, { html: this.props.html }),
                 _react2.default.createElement(
@@ -12669,7 +12669,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = date;
 function date(formatdate) {
   var date = new Date(formatdate);
-  return date;
+  return date.toString().slice(0, 24);
 }
 
 /***/ },

@@ -20,7 +20,7 @@ export default class Event extends Component {
               </div>
               <div className='media-content'>
                 <p className='title is-4'>{this.props.name}</p>
-                <p className='subtitle is-6'>{date(this.props.startdate).toString().slice(0, 24)}</p>
+                <p className='subtitle is-6'>{date(this.props.startdate)}</p>
                 <ModalView html={this.props.html} /><a className='button is-hovered' href={this.props.url}>Go To Event</a>
               </div>
             </div>
