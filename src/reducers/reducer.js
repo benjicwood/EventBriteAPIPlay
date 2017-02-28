@@ -18,7 +18,7 @@ export default function reducer (state, action) {
         loading: false,
         events: action.data
       });
-    case types.FETCH_AVAILABLE_BETS_ERROR:
+    case types.FETCH_EVENTS_ERROR:
       return Object.assign({}, state, {
         loading: false,
         error: action.error

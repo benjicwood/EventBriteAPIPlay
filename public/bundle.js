@@ -12076,7 +12076,7 @@ function reducer(state, action) {
         loading: false,
         events: action.data
       });
-    case types.FETCH_AVAILABLE_BETS_ERROR:
+    case types.FETCH_EVENTS_ERROR:
       return (0, _assign2.default)({}, state, {
         loading: false,
         error: action.error
