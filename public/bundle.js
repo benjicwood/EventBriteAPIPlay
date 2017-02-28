@@ -12579,6 +12579,10 @@ var _reactModal = __webpack_require__(305);
 
 var _reactModal2 = _interopRequireDefault(_reactModal);
 
+var _htmlparser = __webpack_require__(342);
+
+var _htmlparser2 = _interopRequireDefault(_htmlparser);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var customStyles = {
@@ -12645,7 +12649,7 @@ var Mo = function (_Component) {
           _react2.default.createElement(
             'h2',
             { ref: 'subtitle' },
-            _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: this.props.html } })
+            (0, _htmlparser2.default)(this.props.html)
           )
         )
       );
@@ -30249,6 +30253,28 @@ _reactDom2.default.render(_react2.default.createElement(
   { store: store },
   _react2.default.createElement(_App2.default, null)
 ), document.getElementById('root'));
+
+/***/ },
+/* 342 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = htmlstringparser;
+
+var _react = __webpack_require__(10);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function htmlstringparser(htmlstring) {
+  return _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: htmlstring } });
+}
 
 /***/ }
 /******/ ]);

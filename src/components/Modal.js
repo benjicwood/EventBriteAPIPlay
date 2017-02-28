@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 
+import htmlparser from '../helpers/htmlparser';
+
 const customStyles = {
   content: {
     backgroundColor: '#fff'
@@ -45,7 +47,7 @@ export default class Mo extends Component {
           contentLabel='Example Modal'
           style={customStyles}
         >
-          <h2 ref='subtitle'><div dangerouslySetInnerHTML={{__html: this.props.html}} /></h2>
+          <h2 ref='subtitle'>{htmlparser(this.props.html)}</h2>
         </Modal>
       </div>
     );
