@@ -7,4 +7,6 @@ In the command line navigate to the App folder and run the command 'npm install'
 
 The app will be running at http://localhost:3000/
 
+# To Test
 
+Running the command 'npm test' or 'npm run test' in the command line with the server running will show the result the tests.
