@@ -7,5 +7,8 @@ describe('helper functions', function () {
     it('is a function', function () {
       expect(dateformat).to.be.a('function');
     });
+    it('takes one argument', function () {
+      expect(dateformat.length).to.equal(1);
+    });
   });
 });
