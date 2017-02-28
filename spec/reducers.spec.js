@@ -9,7 +9,7 @@ export const initialState = {
   events: []
 };
 
-describe('reducer function', function () {
+describe('reducer', function () {
   it('is a function', function () {
     expect(reducer).to.be.a('function');
   });
