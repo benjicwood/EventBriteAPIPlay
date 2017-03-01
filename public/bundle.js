@@ -12390,43 +12390,47 @@ var Event = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
+        { style: styles.background },
         _react2.default.createElement(
           'div',
-          { className: 'card' },
+          { className: 'columns' },
           _react2.default.createElement(
             'div',
-            { className: 'card-content' },
+            { className: 'card', style: styles.card },
             _react2.default.createElement(
               'div',
-              { className: 'media' },
+              { className: 'card-content' },
               _react2.default.createElement(
                 'div',
-                { className: 'media-left' },
+                { className: 'media' },
                 _react2.default.createElement(
-                  'figure',
-                  { className: 'image is-128x128' },
-                  _react2.default.createElement('img', { src: this.props.image, alt: 'Image' })
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'media-content' },
-                _react2.default.createElement(
-                  'p',
-                  { className: 'title is-4' },
-                  this.props.name
+                  'div',
+                  { className: 'media-left' },
+                  _react2.default.createElement(
+                    'figure',
+                    { className: 'image is-128x128' },
+                    _react2.default.createElement('img', { src: this.props.image, style: styles.image, alt: 'Image' })
+                  )
                 ),
                 _react2.default.createElement(
-                  'p',
-                  { className: 'subtitle is-6' },
-                  (0, _dateformat2.default)(this.props.startdate)
-                ),
-                _react2.default.createElement(_Modal2.default, { html: this.props.html }),
-                _react2.default.createElement(
-                  'a',
-                  { className: 'button is-hovered', href: this.props.url },
-                  'Go To Event'
+                  'div',
+                  { className: 'media-content' },
+                  _react2.default.createElement(
+                    'p',
+                    { className: 'title is-5', style: styles.font },
+                    this.props.name
+                  ),
+                  _react2.default.createElement(
+                    'p',
+                    { className: 'subtitle is-6' },
+                    (0, _dateformat2.default)(this.props.startdate)
+                  ),
+                  _react2.default.createElement(_Modal2.default, { html: this.props.html }),
+                  _react2.default.createElement(
+                    'a',
+                    { className: 'button is-hovered', href: this.props.url },
+                    'Go To Event'
+                  )
                 )
               )
             )
@@ -12439,6 +12443,28 @@ var Event = function (_Component) {
 }(_react.Component);
 
 exports.default = Event;
+
+var styles = {
+  background: {
+    backgroundColor: 'black'
+  },
+  card: {
+    backgroundColor: 'whitesmoke',
+    margin: '0 auto',
+    width: '80%'
+  },
+  image: {
+    borderStyle: 'solid',
+    borderWidth: 'medium'
+  },
+  font: {
+    fontFamily: 'Arial'
+  },
+  center: {
+    margin: '0 auto'
+
+  }
+};
 
 /***/ },
 /* 155 */
@@ -12753,7 +12779,7 @@ var customStyles = {
     paddingTop: '15px',
     paddingLeft: '15px',
     paddingRight: '15px',
-    paddingBottm: '15px'
+    paddingBottom: '15px'
   }
 };
 
@@ -12762,7 +12788,7 @@ var customStyles = {
 /***/ function(module, exports) {
 
 "use strict";
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -12770,7 +12796,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = date;
 function date(formatdate) {
   var date = new Date(formatdate);
-  return date.toString().slice(0, 24);
+  var sliced = date.toString().slice(0, 24);
+  return sliced.slice(0, 15) + ' @ ' + sliced.slice(16, 24);
 }
 
 /***/ },

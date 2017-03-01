@@ -62,6 +62,6 @@ const customStyles = {
     paddingTop: '15px',
     paddingLeft: '15px',
     paddingRight: '15px',
-    paddingBottm: '15px'
+    paddingBottom: '15px'
   }
 };

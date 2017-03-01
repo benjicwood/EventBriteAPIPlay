@@ -21,11 +21,11 @@ describe('helper functions', function () {
     });
     it('formats the date into a more readable format', function () {
       var apidate = '2015-11-08T01:00:00';
-      expect(dateformat(apidate)).to.equal('Sun Nov 08 2015 01:00:00');
+      expect(dateformat(apidate)).to.equal('Sun Nov 08 2015 @ 01:00:00');
     });
     it('removes the timezone (GMT+0000 (GMT)) from the formatted string by slicing the string', function () {
       var apidate = '2015-11-08T01:00:00';
-      expect(dateformat(apidate).length).to.equal(24);
+      expect(dateformat(apidate).length).to.equal(26);
     });
   });
   describe('htmlstringparser', function () {
