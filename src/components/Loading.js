@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
+import spinner from '../helpers/spinner';
+
 export default class Loading extends Component {
   render () {
     return (
       <div style={center}>
         <h2>Loading...</h2>
-        <i className='fa fa-spinner fa-spin fa-3x fa-fw' />
-        <i className='fa fa-spinner fa-spin fa-3x fa-fw' />
+        {spinner()}
+        {spinner()}
       </div>
     );
   }

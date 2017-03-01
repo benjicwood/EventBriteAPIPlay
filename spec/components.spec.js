@@ -25,10 +25,22 @@ describe('Components', function () {
       const wrapper = shallow(<Event />);
       expect(wrapper.find(ModalView)).to.have.length(1);
     });
+    it('links to the event page', function () {
+      const wrapper = shallow(<Event />);
+      expect(wrapper.find('a')).to.have.text('Go To Event');
+    });
   });
   describe('EventsList', function () {
   });
   describe('Loading', function () {
+    it('should have 3 children', function () {
+      const wrapper = shallow(<Loading />);
+      expect(wrapper.children().length).to.equal(3);
+    });
+    it('centers everything in the middle of the page', function () {
+      const wrapper = shallow(<Loading />);
+      expect(wrapper).to.have.style('position');
+    });
   });
   describe('Modal', function () {
   });

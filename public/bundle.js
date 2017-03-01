@@ -30312,6 +30312,10 @@ var _react = __webpack_require__(10);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _spinner = __webpack_require__(344);
+
+var _spinner2 = _interopRequireDefault(_spinner);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Loading = function (_Component) {
@@ -30333,8 +30337,8 @@ var Loading = function (_Component) {
           null,
           'Loading...'
         ),
-        _react2.default.createElement('i', { className: 'fa fa-spinner fa-spin fa-3x fa-fw' }),
-        _react2.default.createElement('i', { className: 'fa fa-spinner fa-spin fa-3x fa-fw' })
+        (0, _spinner2.default)(),
+        (0, _spinner2.default)()
       );
     }
   }]);
@@ -30354,6 +30358,28 @@ var center = {
   width: '100px',
   height: '100px'
 };
+
+/***/ },
+/* 344 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = spinner;
+
+var _react = __webpack_require__(10);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function spinner() {
+  return _react2.default.createElement('i', { className: 'fa fa-spinner fa-spin fa-3x fa-fw' });
+}
 
 /***/ }
 /******/ ]);

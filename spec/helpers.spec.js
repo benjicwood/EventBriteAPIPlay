@@ -1,8 +1,11 @@
 /* global describe it */
+import React from 'react';
+
 import { expect } from 'chai';
 
 import dateformat from '../src/helpers/dateformat';
 import htmlstringparser from '../src/helpers/htmlparser';
+import spinner from '../src/helpers/spinner';
 
 describe('helper functions', function () {
   describe('dateformat', function () {
@@ -34,6 +37,17 @@ describe('helper functions', function () {
     });
     it('returns a react div element as an object', function () {
       expect(htmlstringparser()).to.be.a('object');
+    });
+    describe('spinner', function () {
+      it('is a function', function () {
+        expect(spinner).to.be.a('function');
+      });
+      it('takes no arguments', function () {
+        expect(spinner.length).to.equal(0);
+      });
+      it('returns a fontawesome spinner when called', function () {
+        expect(spinner()).to.eql(<i className='fa fa-spinner fa-spin fa-3x fa-fw' />);
+      });
     });
   });
 });
