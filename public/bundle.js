@@ -12695,7 +12695,7 @@ var ModalView = function (_Component) {
   }, {
     key: 'afterOpenModal',
     value: function afterOpenModal() {
-      this.refs.subtitle.style.color = '#f00';
+      this.refs.subtitle.style.color = '#001f3f';
     }
   }, {
     key: 'closeModal',
@@ -12740,8 +12740,20 @@ exports.default = ModalView;
 
 var customStyles = {
   content: {
-    backgroundColor: '#fff'
-
+    justifyContent: 'center',
+    backgroundColor: 'whitesmoke',
+    position: 'absolute',
+    margin: 'auto',
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+    width: '800px',
+    height: '950px',
+    paddingTop: '15px',
+    paddingLeft: '15px',
+    paddingRight: '15px',
+    paddingBottm: '15px'
   }
 };
 

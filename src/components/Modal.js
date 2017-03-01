@@ -21,7 +21,7 @@ export default class ModalView extends Component {
   }
 
   afterOpenModal () {
-    this.refs.subtitle.style.color = '#f00';
+    this.refs.subtitle.style.color = '#001f3f';
   }
 
   closeModal () {
@@ -49,7 +49,19 @@ export default class ModalView extends Component {
 
 const customStyles = {
   content: {
-    backgroundColor: '#fff'
-
+    justifyContent: 'center',
+    backgroundColor: 'whitesmoke',
+    position: 'absolute',
+    margin: 'auto',
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+    width: '800px',
+    height: '950px',
+    paddingTop: '15px',
+    paddingLeft: '15px',
+    paddingRight: '15px',
+    paddingBottm: '15px'
   }
 };
