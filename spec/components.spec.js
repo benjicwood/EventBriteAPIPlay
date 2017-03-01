@@ -2,7 +2,8 @@
 import React from 'react';
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
-import {mount, shallow} from 'enzyme';
+import {render, shallow} from 'enzyme';
+// import sinon from 'sinon';
 
 import App from '../src/components/App';
 import Event from '../src/components/Event';
@@ -18,10 +19,6 @@ describe('Components', function () {
       const wrapper = shallow(<App />);
       expect(wrapper.find(EventsList)).to.have.length(1);
     });
-    it('***********', function () {
-      const wrapper = mount(<App />);
-      expect(wrapper.find('#app')).to.have.html('<div id=\'app\'><EventsList /></div>');
-    });
   });
   describe('<Event />', function () {
     it('renders one <ModalView /> component', function () {
@@ -36,10 +33,18 @@ describe('Components', function () {
       const wrapper = shallow(<Event />);
       expect(wrapper.find('a')).to.have.text('Go To Event');
     });
+    it('renders the event card', () => {
+      const wrapper = render(<Event />);
+      expect(wrapper.find('.card')).to.have.length(1);
+    });
   });
-  describe('EventsList', function () {
+  describe('<EventsList />', function () {
   });
   describe('<Loading />', function () {
+    it('shows the text loading', function () {
+      const wrapper = shallow(<div><h2>Loading...</h2></div>);
+      expect(wrapper.text()).to.equal('Loading...');
+    });
     it('should have 3 children', function () {
       const wrapper = shallow(<Loading />);
       expect(wrapper.children().length).to.equal(3);
@@ -54,5 +59,11 @@ describe('Components', function () {
       const wrapper = shallow(<ModalView />);
       expect(wrapper).to.have.state('modalIsOpen');
     });
+    // it('simulates click events', function () {
+    //   const onFakeClick = sinon.spy();
+    //   const wrapper = shallow(<ModalView onClick={onFakeClick} />);
+    //   wrapper.find('a').simulate('click');
+    //   expect(onFakeClick.calledOnce).to.equal(true);
+    // });
   });
 });
