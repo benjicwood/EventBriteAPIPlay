@@ -12304,6 +12304,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function fetchEvents() {
   return function (dispatch) {
+    dispatch(fetchEventsRequest());
     _superagent2.default.get('' + _config.ROOT).end(function (error, response) {
       if (error) dispatch(fetchEventsError(error));else dispatch(fetchEventsSuccess(response.body));
     });

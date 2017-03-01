@@ -4,6 +4,7 @@ import { ROOT } from '../../config';
 
 export function fetchEvents () {
   return (dispatch) => {
+    dispatch(fetchEventsRequest());
     request
     .get(`${ROOT}`)
     .end((error, response) => {

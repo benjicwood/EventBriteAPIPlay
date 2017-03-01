@@ -7,7 +7,7 @@ import dateformat from '../src/helpers/dateformat';
 import htmlstringparser from '../src/helpers/htmlparser';
 import spinner from '../src/helpers/spinner';
 
-describe('helper functions', function () {
+describe('Helper Functions', function () {
   describe('dateformat', function () {
     it('is a function', function () {
       expect(dateformat).to.be.a('function');
