@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 
 import htmlparser from '../helpers/htmlparser';
 
-export default class Mo extends Component {
+export default class ModalView extends Component {
   constructor () {
     super();
 

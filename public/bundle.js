@@ -12061,7 +12061,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var initialState = exports.initialState = {
   loading: false,
   error: null,
-  events: []
+  events: [],
+  modalIsOpen: false
 };
 
 function reducer(state, action) {
@@ -12585,13 +12586,13 @@ var _htmlparser2 = _interopRequireDefault(_htmlparser);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Mo = function (_Component) {
-  (0, _inherits3.default)(Mo, _Component);
+var ModalView = function (_Component) {
+  (0, _inherits3.default)(ModalView, _Component);
 
-  function Mo() {
-    (0, _classCallCheck3.default)(this, Mo);
+  function ModalView() {
+    (0, _classCallCheck3.default)(this, ModalView);
 
-    var _this = (0, _possibleConstructorReturn3.default)(this, (Mo.__proto__ || (0, _getPrototypeOf2.default)(Mo)).call(this));
+    var _this = (0, _possibleConstructorReturn3.default)(this, (ModalView.__proto__ || (0, _getPrototypeOf2.default)(ModalView)).call(this));
 
     _this.state = {
       modalIsOpen: false
@@ -12603,7 +12604,7 @@ var Mo = function (_Component) {
     return _this;
   }
 
-  (0, _createClass3.default)(Mo, [{
+  (0, _createClass3.default)(ModalView, [{
     key: 'openModal',
     value: function openModal() {
       this.setState({ modalIsOpen: true });
@@ -12648,10 +12649,10 @@ var Mo = function (_Component) {
       );
     }
   }]);
-  return Mo;
+  return ModalView;
 }(_react.Component);
 
-exports.default = Mo;
+exports.default = ModalView;
 
 
 var customStyles = {

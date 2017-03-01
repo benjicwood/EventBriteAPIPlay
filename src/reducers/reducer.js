@@ -3,7 +3,8 @@ import * as types from '../actions/types';
 export const initialState = {
   loading: false,
   error: null,
-  events: []
+  events: [],
+  modalIsOpen: false
 };
 
 export default function reducer (state, action) {
