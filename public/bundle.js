@@ -30326,8 +30326,14 @@ var Loading = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
-        'Loading'
+        { style: center },
+        _react2.default.createElement(
+          'h2',
+          null,
+          'Loading...'
+        ),
+        _react2.default.createElement('i', { className: 'fa fa-spinner fa-spin fa-3x fa-fw' }),
+        _react2.default.createElement('i', { className: 'fa fa-spinner fa-spin fa-3x fa-fw' })
       );
     }
   }]);
@@ -30335,6 +30341,18 @@ var Loading = function (_Component) {
 }(_react.Component);
 
 exports.default = Loading;
+
+
+var center = {
+  position: 'absolute',
+  margin: 'auto',
+  top: 0,
+  right: 0,
+  bottom: 0,
+  left: 0,
+  width: '100px',
+  height: '100px'
+};
 
 /***/ }
 /******/ ]);
