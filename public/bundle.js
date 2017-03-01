@@ -12022,7 +12022,7 @@ var App = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
+        { id: 'app' },
         _react2.default.createElement(_EventsList2.default, null)
       );
     }
@@ -12450,6 +12450,7 @@ exports.default = Event;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.EventsList = undefined;
 
 var _getPrototypeOf = __webpack_require__(39);
 
@@ -12493,7 +12494,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var EventsList = function (_Component) {
+var EventsList = exports.EventsList = function (_Component) {
   (0, _inherits3.default)(EventsList, _Component);
 
   function EventsList() {

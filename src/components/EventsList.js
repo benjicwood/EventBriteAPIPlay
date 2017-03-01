@@ -5,7 +5,7 @@ import * as actions from '../actions/actions';
 import Event from './Event';
 import Loading from './Loading';
 
-class EventsList extends Component {
+export class EventsList extends Component {
   componentWillMount () {
     this.props.fetchEvents(this.props.events);
   }

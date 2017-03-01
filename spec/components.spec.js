@@ -2,8 +2,7 @@
 import React from 'react';
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
-import {mount, render, shallow} from 'enzyme';
-import sinon from 'sinon';
+import {mount, shallow} from 'enzyme';
 
 import App from '../src/components/App';
 import Event from '../src/components/Event';
@@ -19,11 +18,19 @@ describe('Components', function () {
       const wrapper = shallow(<App />);
       expect(wrapper.find(EventsList)).to.have.length(1);
     });
+    it('***********', function () {
+      const wrapper = mount(<App />);
+      expect(wrapper.find('#app')).to.have.html('<div id=\'app\'><EventsList /></div>');
+    });
   });
   describe('<Event />', function () {
     it('renders one <ModalView /> component', function () {
       const wrapper = shallow(<Event />);
       expect(wrapper.find(ModalView)).to.have.length(1);
+    });
+    it('ModalView component has given props of html', function () {
+      const wrapper = shallow(<Event />);
+      expect(wrapper.find(ModalView).first()).to.have.props(['html']);
     });
     it('links to the event page', function () {
       const wrapper = shallow(<Event />);
@@ -32,7 +39,7 @@ describe('Components', function () {
   });
   describe('EventsList', function () {
   });
-  describe('Loading', function () {
+  describe('<Loading />', function () {
     it('should have 3 children', function () {
       const wrapper = shallow(<Loading />);
       expect(wrapper.children().length).to.equal(3);
@@ -42,6 +49,10 @@ describe('Components', function () {
       expect(wrapper).to.have.style('position');
     });
   });
-  describe('Modal', function () {
+  describe('<Modal />', function () {
+    it('has a given state of modalIsOpen', function () {
+      const wrapper = shallow(<ModalView />);
+      expect(wrapper).to.have.state('modalIsOpen');
+    });
   });
 });
