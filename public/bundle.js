@@ -12585,13 +12585,6 @@ var _htmlparser2 = _interopRequireDefault(_htmlparser);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var customStyles = {
-  content: {
-    backgroundColor: '#fff'
-
-  }
-};
-
 var Mo = function (_Component) {
   (0, _inherits3.default)(Mo, _Component);
 
@@ -12659,6 +12652,14 @@ var Mo = function (_Component) {
 }(_react.Component);
 
 exports.default = Mo;
+
+
+var customStyles = {
+  content: {
+    backgroundColor: '#fff'
+
+  }
+};
 
 /***/ },
 /* 157 */

@@ -39,13 +39,16 @@
     "redux-devtools-extension": "^2.13.0",
     "redux-logger": "^2.8.1",
     "redux-thunk": "^2.2.0",
+    "sinon": "^1.17.7",
     "superagent": "^3.5.0",
     "webpack": "^2.2.1"
   },
   "devDependencies": {
     "babel-jest": "^19.0.0",
+    "chai-enzyme": "^0.6.1",
     "concurrently": "^3.3.0",
     "enzyme": "^2.7.1",
+    "react-addons-test-utils": "^15.4.2",
     "webpack": "^2.1.0-beta.22"
   }
 }

@@ -3,13 +3,6 @@ import Modal from 'react-modal';
 
 import htmlparser from '../helpers/htmlparser';
 
-const customStyles = {
-  content: {
-    backgroundColor: '#fff'
-
-  }
-};
-
 export default class Mo extends Component {
   constructor () {
     super();
@@ -53,3 +46,10 @@ export default class Mo extends Component {
     );
   }
 }
+
+const customStyles = {
+  content: {
+    backgroundColor: '#fff'
+
+  }
+};
