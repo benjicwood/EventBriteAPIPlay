@@ -12484,6 +12484,10 @@ var _Event = __webpack_require__(154);
 
 var _Event2 = _interopRequireDefault(_Event);
 
+var _Loading = __webpack_require__(343);
+
+var _Loading2 = _interopRequireDefault(_Loading);
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -12505,11 +12509,7 @@ var EventsList = function (_Component) {
     key: 'render',
     value: function render() {
       if (!this.props.events.events) {
-        return _react2.default.createElement(
-          'div',
-          null,
-          'Loading...'
-        );
+        return _react2.default.createElement(_Loading2.default, null);
       } else {
         return _react2.default.createElement(
           'div',
@@ -30275,6 +30275,66 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function htmlstringparser(htmlstring) {
   return _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: htmlstring } });
 }
+
+/***/ },
+/* 343 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _getPrototypeOf = __webpack_require__(39);
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = __webpack_require__(40);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(41);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = __webpack_require__(43);
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = __webpack_require__(42);
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = __webpack_require__(10);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Loading = function (_Component) {
+  (0, _inherits3.default)(Loading, _Component);
+
+  function Loading() {
+    (0, _classCallCheck3.default)(this, Loading);
+    return (0, _possibleConstructorReturn3.default)(this, (Loading.__proto__ || (0, _getPrototypeOf2.default)(Loading)).apply(this, arguments));
+  }
+
+  (0, _createClass3.default)(Loading, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        'Loading'
+      );
+    }
+  }]);
+  return Loading;
+}(_react.Component);
+
+exports.default = Loading;
 
 /***/ }
 /******/ ]);

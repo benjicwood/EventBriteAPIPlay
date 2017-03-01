@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
 
 import Event from './Event';
+import Loading from './Loading';
 
 class EventsList extends Component {
   componentWillMount () {
@@ -11,7 +12,7 @@ class EventsList extends Component {
   render () {
     if (!this.props.events.events) {
       return (
-        <div>Loading...</div>
+        <Loading />
       );
     } else {
       return (
