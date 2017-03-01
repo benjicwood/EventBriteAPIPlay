@@ -3,7 +3,6 @@ import React from 'react';
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 import {render, shallow} from 'enzyme';
-// import sinon from 'sinon';
 
 import App from '../src/components/App';
 import Event from '../src/components/Event';
@@ -59,11 +58,5 @@ describe('Components', function () {
       const wrapper = shallow(<ModalView />);
       expect(wrapper).to.have.state('modalIsOpen');
     });
-    // it('simulates click events', function () {
-    //   const onFakeClick = sinon.spy();
-    //   const wrapper = shallow(<ModalView onClick={onFakeClick} />);
-    //   wrapper.find('a').simulate('click');
-    //   expect(onFakeClick.calledOnce).to.equal(true);
-    // });
   });
 });
