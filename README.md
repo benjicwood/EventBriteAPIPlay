@@ -1,4 +1,4 @@
-# The Distance Tech Test
+# EventBrite API
 The App has been created in React with Redux as a Web App using the eventbrite api found at https://www.eventbriteapi.com/v3/events/search/?token=VBUSKKCQ2VTXKPOP34PX
 
 # Heroku
