@@ -3,7 +3,7 @@ The App has been created in React with Redux as a Web App using the eventbrite a
 
 # Heroku
 
-https://bcthedistancetechtest.herokuapp.com/
+https://bceventbriteapiplay.herokuapp.com/
 
 # Running Locally
 
